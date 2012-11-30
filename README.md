@@ -1,6 +1,4 @@
-ee3350-project
+3350-project
 ==============
 
 Design of a Class-A power amplifier for use in audio applications.
-
-test.
