@@ -109,15 +109,15 @@ asdf
 
 Various approaches and topologies were investigated. From single-transistor to CE-EF to op-amp implementations, each design was examined on a broad level with advantages and drawbacks determined.
 
-\subsection{First}
+\subsection{Transformer Coupled}
 
 my transformer design
 
-\subsection{Second}
+\subsection{CE-EF Cap Coupled}
 
 similar design to chosen one that doesn't use bipolar supply (increases hum). 
 
-\subsection{Third}
+\subsection{Op-Amp Implementation}
 
 one of the designs that used lots of op-amps (usable, but lack of familiarity with op-amps resulted in using the selected design)
 
@@ -163,151 +163,14 @@ asdf
 
 asdf
 
-\section{Derived Component Values}
-
-This section documents the general process for finding ideal component values to meet the specifications. In each of these cases it is assumed $\omega_{o}$ is in terms of rad/s. In each case, one started by selecting an available value for one of the components, and then finding the available value for the subsequent components that would bring the resonant frequency closest to that requested.
-
-\subsection{RC high-pass}
-
-For an RC high-pass circuit, the following relationship may be exploited to determine proper R and C values:
-
-\begin{align*}
-\omega_{o} = \frac{1}{RC}
-\end{align*}
-
-A choice of C = 1$\mu$F led to a value of R = 27$\Omega$. This selection provides a resonant frequency of 37,037 rad/s (5894 Hz).
-
-\subsection{RL low-pass}
-
-For an RL low-pass circuit, the following relationship may be exploited to determine proper R and L values:
-
-\begin{align*}
-\omega_{o} = \frac{R}{L}
-\end{align*}
-
-A choice of L = 4.7 mH led to a value of R = $37\Omega$. This selection provides a resonant frequency of 2765.95 rad/s (440.2 Hz).
-
-\subsection{RLC band-pass}
-
-For an RLC band-pass circuit, the following relationships may be exploited to determine proper R, C, and L values:
-
-\begin{align*}
-\omega_{o} &= \sqrt{\frac{1}{LC}}\\
-\omega_{2} &= \frac{\frac{R}{L} + \sqrt{\left(\frac{R}{L}\right)^{2} + 4\omega^{2}}}{2}\\
-\beta &= \left(\omega_{2}-\omega_{o}\right)\cdot 2\\
-Q &= \frac{\omega_{o}}{\beta}
-\end{align*}
-
-Start by selecting an available inductor. Then find an appropriate available capacitor so as to approach the desired resonant frequency. Once one has L and C values, utilize the second equation above, in conjunction with the third and fourth, to find a resistor that will narrow the bandwidth to a range  sufficiently small to meet the minimum Q-factor. One is essentially using brute force over the available resistor components to find $\omega_{2}$, and then checking whether the resulting bandwidth (and thus resulting Q-factor) is appropriate. The following values exceed the specification and approach a Q-factor of 15:
-
-\begin{enumerate}
-\item
-L = 4.7mH
-\item
-C = 10nF
-\item
-R = 47$\Omega$
-\item
-$\omega_{o}$ = 145,864 rad/s (23,215 Hz)
-\item
-Q = 14.34
-\end{enumerate}
-
-\subsection{RLC band-stop}
-
-A band-stop filter may be designed as though one were creating a band-pass filter. One must still wire the band-stop filter components correctly though. The same relationships and process as above may be utilized to arrive at component values.
-
-\begin{enumerate}
-\item
-L = 2.2mH
-\item
-C = 10nF
-\item
-R = 27$\Omega$
-\item
-$\omega_{o}$ = 213,200 rad/s (33,931 Hz)
-\item
-Q = 17.37
-\end{enumerate}
-
-\section{Experimental Procedure}
-
-% Use enumerate to give numbered lists
-\begin{enumerate}
-\item
-Construct each filter above on the NI ELVIS board.
-\item
-Apply the proper wiring from pin outs for the function generator (the source for the circuit) and the probes utilized by the bode analyzer. It is recommended that one uses A1 for the source and A0 for the response.
-\item
-Engage the bode analyzer. Adjust the step, minimum frequency, and maximum frequency options as necessary in order to generate a usable plot for analysis.
-\item
-Should the bode analyzer throw a warning regarding "OVERFLOW," restart the bode analyzer.
-\end{enumerate}
-
-\section{Collected Data and Analysis}
-
-\subsection{RC High-pass}
-
-
-\begin{tabular}{|c|c|c|c|}
-\hline
-Value & Expected & Measured & \% error \\
-\hline
-$\omega_{o}$ (Hz) & 5894 & 2747 & -53.4\\
-\hline
-phase (deg) & 45 & 41.096 & -8.67\\
-\hline
-\end{tabular}
-
-The measured resonant frequency is much lower than anticipated. Further inspection of the components revealed that a 62$\Omega$ resistor had actually been used. Knowing this, the expected value would have been 2567 Hz, much closer to the measured value and with a much smaller percent error (-6.55\%).
-
-\subsection{RL Low-pass}
-
-
-\begin{tabular}{|c|c|c|c|}
-\hline
-Value & Expected & Measured & \% error \\
-\hline
-$\omega_{o}$ (Hz) & 440 & NA & NA\\
-\hline
-phase (deg) & 45 & NA & NA\\
-\hline
-\end{tabular}
-
-As one can see from the above graph, the filter never exceeded a -6 dB gain, regardless of settings given to the bode analyzer. It is as though the gain has been shifted downward by 6 dB across all frequencies. As well, the line is significantly less concave than the high-pass filter. A source for this behaviour was unable to be determined.
-
-\subsection{RLC Band-Pass}
-
-
-\begin{tabular}{|c|c|c|c|}
-\hline
-Value & Expected & Measured & \% error \\
-\hline
-$\omega_{o}$ (Hz) & 23,215 & 22,288 & -3.99\\
-\hline
-phase (deg) & 0 & -2.07 & NA\\
-\hline
-\end{tabular}
-
-The bode plots behaved as expected both in general shape and values returned. Given that the expected phase degree is zero, one cannot use the typical formula for percent error. However, the small difference indicates that the phase plot was behaving as expected. 
-
-\subsection{RLC Band-Stop}
-
-
-\begin{tabular}{|c|c|c|c|}
-\hline
-Value & Expected & Measured & \% error \\
-\hline
-$\omega_{o}$ (Hz) & 33,931 & 32,804 & -3.32\\
-\hline
-phase (deg) & 0 & -4.53 & NA\\
-\hline
-\end{tabular}
-
-Once again the general shape is as expected. As well, the values are well within the 5\% margins requested.
-
-\section{Conclusion}
-
-The general behaviour was confirmed for three of the four basic filters. Several groups reported trouble with the low-pass filter, regardless of its RL or RC nature. Errors exceeding 5\% are expected, given that the tolerance on the resistors alone is 10\% on either side of the listed value. However, the band-pass and band-stop were both within tolerance even with such components.
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%Value & Expected & Measured & \% error \\
+%\hline
+%$\omega_{o}$ (Hz) & 33,931 & 32,804 & -3.32\\
+%\hline
+%phase (deg) & 0 & -4.53 & NA\\
+%\hline
+%\end{tabular}
 
 \end{document}

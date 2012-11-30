@@ -4,9 +4,9 @@
 \BOOKMARK [2][-]{subsection.3.1}{Block Diagram}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Considerations}{section.3}% 5
 \BOOKMARK [1][-]{section.4}{Rejected Amplifier Designs}{}% 6
-\BOOKMARK [2][-]{subsection.4.1}{First}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Second}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{Third}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Transformer Coupled}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{CE-EF Cap Coupled}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Op-Amp Implementation}{section.4}% 9
 \BOOKMARK [2][-]{subsection.4.4}{Comparison Summary}{section.4}% 10
 \BOOKMARK [1][-]{section.5}{Selected Amplifer Design}{}% 11
 \BOOKMARK [2][-]{subsection.5.1}{Block Diagram}{section.5}% 12
@@ -15,15 +15,3 @@
 \BOOKMARK [2][-]{subsection.5.4}{Considerations}{section.5}% 15
 \BOOKMARK [1][-]{section.6}{Cost Analysis of Selected Design}{}% 16
 \BOOKMARK [1][-]{section.7}{Conclusion}{}% 17
-\BOOKMARK [1][-]{section.8}{Derived Component Values}{}% 18
-\BOOKMARK [2][-]{subsection.8.1}{RC high-pass}{section.8}% 19
-\BOOKMARK [2][-]{subsection.8.2}{RL low-pass}{section.8}% 20
-\BOOKMARK [2][-]{subsection.8.3}{RLC band-pass}{section.8}% 21
-\BOOKMARK [2][-]{subsection.8.4}{RLC band-stop}{section.8}% 22
-\BOOKMARK [1][-]{section.9}{Experimental Procedure}{}% 23
-\BOOKMARK [1][-]{section.10}{Collected Data and Analysis}{}% 24
-\BOOKMARK [2][-]{subsection.10.1}{RC High-pass}{section.10}% 25
-\BOOKMARK [2][-]{subsection.10.2}{RL Low-pass}{section.10}% 26
-\BOOKMARK [2][-]{subsection.10.3}{RLC Band-Pass}{section.10}% 27
-\BOOKMARK [2][-]{subsection.10.4}{RLC Band-Stop}{section.10}% 28
-\BOOKMARK [1][-]{section.11}{Conclusion}{}% 29
