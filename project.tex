@@ -56,12 +56,15 @@
 
 % Give the abstract of your lab here
 \begin{abstract}
-The final project for Dr. Aslan's Fall 2012 Electronics I course was to design a power amplifier for use in audio applications. The goal was to apply knowledge of power supplies (diodes and transformers) and amplifiers (BJT transistors with hybrid pi model) to design a Class-A power amplifier from end to end. Particular emphasis was placed on collaborative design and CAD-assisted verification via Multisim software. 
+The final project for Dr. Aslan's Fall 2012 Electronics I course was to design a power amplifier for use in audio applications. The goal was to apply knowledge of power supplies (diodes and transformers) and amplifiers (BJT transistors with hybrid pi model) to design a Class-A power amplifier from end to end. Particular emphasis was placed on collaborative design and CAD-assisted verification via Multisim software, as well as having as large a bandwidth as possible. 
 
 Team Helios chose a common emitter to emitter follower design as a base. Choosing to employ a bipolar dual-rail power supply to the system --so as to increase maximum voltage swing and have zero power output in the absence an applied signal (no heat dissipation)-- necessitated the introduction of a third transistor to act as a voltage shift. The result is an amplifier that has an approximate voltage gain of 142 and a power output of approximately five milliwatts across resistive loads varying from 2 to 16 ohms, as per the specification. Efficiency was measured as approximately five percent compared to the DC input. Total cost was determined to be X dollars. Lead times from manufacture to customer delivery are conservatively given at two months.
 \end{abstract}
 
 \tableofcontents
+
+%hacky. might remove later.
+\newpage
 
 % Split your lab report into sections by calling \section{Section name}
 \section{Introduction and Product Specifications}
@@ -104,7 +107,7 @@ The following design is an improvement on the basic models introduced at the sta
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.4]{final-psu.png}
+\includegraphics[scale=.36]{final-psu.png}
 \label{fig_psu_schem}
 \end{figure}
 
@@ -128,23 +131,52 @@ Various approaches and topologies were investigated. From single-transistor to C
 
 \subsection{Transformer Coupled}
 
-my transformer design
+This design used a single CE transistor, replacing $R_{C}$ with a transformer to increase efficiency.
 
-\subsection{CE-EF Cap Coupled}
+add my image here...
 
-similar design to chosen one that doesn't use bipolar supply (increases hum). 
+\subsection{CE-EF one rail}
+
+This design used a CE-EF implementation with a single 12 V rail.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{reject-2.png}
+\label{fig_reject_2}
+\end{figure}
 
 \subsection{Op-Amp Implementation}
 
-one of the designs that used lots of op-amps (usable, but lack of familiarity with op-amps resulted in using the selected design)
+This design implemented the specification utilizing Op-Amps.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{reject-3.png}
+\label{fig_reject_3}
+\end{figure}
 
 \subsection{Comparison Summary}
 
-Advantages Drawbacks 
+The following table summarizes the comparisons of these designs. 
+
+\begin{tabular}{|c|p{3cm}|c|c|}
+\hline
+& Advantages & Drawbacks \\
+\hline
+A & -Single transistor & -Transformers are bulky\\
+  & -Peak efficiency of 50\% & -Outdated design\\
+\hline
+B& -CE-EF gives good impedence matching & -Always drawing power \\
+ & -Intuitive & -Hum on bypass cap\\
+\hline
+C & -Very stable & -Team unfamiliar with Op-Amps\\
+\hline
+\end{tabular}
+
+The bulkiness of the transformer coupled design removed it as a choice. The hum on the bypass capacitor eliminated the CE-EF one rail design. The Op-Amp implementation, while very stable, was not chosen as team Helios is unfamiliar with Op-Amps.
 
 \section{Selected Amplifer Design}
 
-The full schematic is below
+The following schematic is the chosen design of team Helios. It is comprised of a CE transistor, followed by a complimentary transistor that acts as voltage shift, followed by a Darlington pair to act as the EF to the load.
 
 \begin{figure}[H]
 \centering
@@ -154,7 +186,11 @@ The full schematic is below
 
 \subsection{Block Diagram}
 
-adsf
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.38]{amp-block.png}
+\label{fig_amp_block}
+\end{figure}
 
 \subsection{Design Approach}
 
@@ -166,11 +202,11 @@ This fast and loose approach permits a more rapid development process that can a
 
 \subsection{Calculations}
 
-\textcolor{red}{Still haven't gotten any calculations. Granted, the above does a good job on the philosophizing.}
+\textcolor{red}{Haven't gotten any calculations yet. Granted, the above does a good job on the philosophizing.}
 
 \subsection{Considerations}
 
-adsf
+\textcolor{red}{Tweaking $R_{E1}$, servo feedback control, why use darlington instead of single transistor?, variance in output power as load increases from 2 to 16 ohms.}
 
 \section{Cost Analysis of Selected Design}
 
@@ -178,7 +214,7 @@ adsf
 
 \section{Conclusion}
 
-asdf
+\textcolor{red}{Essentially reiterate the abstract. Place emphasis on cost and how we have not just met but exceeded customer specifications.}
 
 %\begin{tabular}{|c|c|c|c|}
 %\hline

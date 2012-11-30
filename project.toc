@@ -5,12 +5,12 @@
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Considerations}{2}{subsection.3.2}
 \contentsline {section}{\numberline {IV}Rejected Amplifier Designs}{2}{section.4}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Transformer Coupled}{2}{subsection.4.1}
-\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}CE-EF Cap Coupled}{2}{subsection.4.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}CE-EF one rail}{2}{subsection.4.2}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Op-Amp Implementation}{2}{subsection.4.3}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Comparison Summary}{2}{subsection.4.4}
 \contentsline {section}{\numberline {V}Selected Amplifer Design}{2}{section.5}
-\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Block Diagram}{2}{subsection.5.1}
-\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Design Approach}{2}{subsection.5.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Block Diagram}{3}{subsection.5.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Design Approach}{3}{subsection.5.2}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Calculations}{3}{subsection.5.3}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Considerations}{3}{subsection.5.4}
 \contentsline {section}{\numberline {VI}Cost Analysis of Selected Design}{3}{section.6}
