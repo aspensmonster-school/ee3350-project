@@ -33,6 +33,9 @@
 %For hyperlinks
 \usepackage{hyperref}
 
+%For colored text
+\usepackage{color}
+
 % There are TONS of other packages you can use for various different cases.
 % Bibliographies are big in research papers but not important for lab reports
 % (I think...?). So I haven't included any bibliography code
@@ -66,13 +69,19 @@ Team Helios chose a common emitter to emitter follower design as a base. Choosin
 
 \begin{itemize}
 \item
-blah
+Input:  $V_{s}=1 mVpk$, $R_{s}=50\Omega$
 \item
-blah
+Output: Speaker that ranges from $2\Omega$ to $16\Omega$.
 \item
-blah
+Onboard 12V DC power supply (bipolar permited)
 \item
-blah
+USB connector for charging purposes (investigate whether this is possible)
+\item
+High power gain
+\item
+High efficiency
+\item
+Minimum cost
 \end{itemize}
 
 %\begin{figure}[h!]
@@ -85,7 +94,9 @@ blah
 
 Given the audio application of the amplifier, one can reasonably assume that the frequency of the input signal will fall between 22 Hz and 22 kHz. While the client desires as wide a bandwidth as possible, the audio bandwidth is the most crucial to meet. The lower bound of 22 Hz would require significantly larger capacitors to place the lower cutoff value at said frequency. Team Helios assumes a lower bound of 100 Hz in calculations, knowing that the effect on these low frequencies past the 100 Hz cutoff is negligible. In addition, the chosen design that uses DC coupling to minimize the need for capacitors has an added effect of reducing attenuation at each cutoff frequency.
 
-asdf
+The request to investigate possibilities of USB charging was at first interpreted as an indication that the circuit needed to be powered by battery. Further communication with client indicates that this assumption wasn't accurate. The client is interested in the ability to charge the signal source --mp3 player, iPod, etc-- as it is playing. This is possible. However, the charging currents required by USB devices vary considerably, and the ability to charge and operate at the same time is widespread but not universal.
+
+The high power gain and high efficiency requirements are restricted by the request for a Class A amplifier; such amplifiers have a maximum theoretical efficiency of 25\%, with typical designs in the single digits.
 
 \section{Power Supply Design}
 
@@ -99,11 +110,17 @@ The following design is an improvement on the basic models introduced at the sta
 
 \subsection{Block Diagram}
 
-asdf
+From mains input to DC output, there are multiple issues to address. Switching and fusing off mains before hitting the transformer is a given. Along the way, one may address EMI, inrush current, and overvoltage protections for the voltage regulator chips.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.35]{psu-block.png}
+\label{fig_psu_block}
+\end{figure}
 
 \subsection{Considerations}
 
-Don't have Jonathan's report on the different types of caps yet. Holding off on this part for now.
+\textcolor{red}{Don't have Jonathan's report on the different types of caps yet. Holding off on this part for now.}
 
 \section{Rejected Amplifier Designs}
 
@@ -149,7 +166,7 @@ This fast and loose approach permits a more rapid development process that can a
 
 \subsection{Calculations}
 
-Still haven't gotten any calculations. Granted, the above does a good job on the philosophizing.
+\textcolor{red}{Still haven't gotten any calculations. Granted, the above does a good job on the philosophizing.}
 
 \subsection{Considerations}
 
@@ -157,7 +174,7 @@ adsf
 
 \section{Cost Analysis of Selected Design}
 
-asdf
+\textcolor{red}{I didn't anticipate this being an all-night affair, but it has been :D For now, cost analysis will merely be the raw cost of components. I'll consider adding in production cost and delivery tables for the presentation over the weekend.}
 
 \section{Conclusion}
 
