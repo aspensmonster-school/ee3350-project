@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {I}Introduction and Product Specifications}{1}{section.1}
+\contentsline {section}{\numberline {II}Implications of Specifications}{1}{section.2}
+\contentsline {section}{\numberline {III}Power Supply Design}{1}{section.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Block Diagram}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Considerations}{2}{subsection.3.2}
+\contentsline {section}{\numberline {IV}Rejected Amplifier Designs}{2}{section.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}First}{2}{subsection.4.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Second}{2}{subsection.4.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Third}{2}{subsection.4.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Comparison Summary}{2}{subsection.4.4}
+\contentsline {section}{\numberline {V}Selected Amplifer Design}{2}{section.5}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Block Diagram}{2}{subsection.5.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Design Approach}{2}{subsection.5.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Calculations}{3}{subsection.5.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Considerations}{3}{subsection.5.4}
+\contentsline {section}{\numberline {VI}Cost Analysis of Selected Design}{3}{section.6}
+\contentsline {section}{\numberline {VII}Conclusion}{3}{section.7}
+\contentsline {section}{\numberline {VIII}Derived Component Values}{3}{section.8}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-A}}RC high-pass}{3}{subsection.8.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-B}}RL low-pass}{3}{subsection.8.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-C}}RLC band-pass}{3}{subsection.8.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VIII-D}}RLC band-stop}{3}{subsection.8.4}
+\contentsline {section}{\numberline {IX}Experimental Procedure}{3}{section.9}
+\contentsline {section}{\numberline {X}Collected Data and Analysis}{4}{section.10}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-A}}RC High-pass}{4}{subsection.10.1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-B}}RL Low-pass}{4}{subsection.10.2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-C}}RLC Band-Pass}{4}{subsection.10.3}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-D}}RLC Band-Stop}{4}{subsection.10.4}
+\contentsline {section}{\numberline {XI}Conclusion}{5}{section.11}
