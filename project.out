@@ -10,8 +10,12 @@
 \BOOKMARK [2][-]{subsection.4.4}{Comparison Summary}{section.4}% 10
 \BOOKMARK [1][-]{section.5}{Selected Amplifer Design}{}% 11
 \BOOKMARK [2][-]{subsection.5.1}{Block Diagram}{section.5}% 12
-\BOOKMARK [2][-]{subsection.5.2}{Design Approach}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.3}{Calculations}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.4}{Considerations}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{Cost Analysis of Selected Design}{}% 16
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 17
+\BOOKMARK [2][-]{subsection.5.2}{Design Philosophy}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Analysis and Calculations}{section.5}% 14
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Design Approach}{subsection.5.3}% 15
+\BOOKMARK [3][-]{subsubsection.5.3.2}{CE Gain Stage}{subsection.5.3}% 16
+\BOOKMARK [3][-]{subsubsection.5.3.3}{Output Driver}{subsection.5.3}% 17
+\BOOKMARK [3][-]{subsubsection.5.3.4}{Bridging the Gap}{subsection.5.3}% 18
+\BOOKMARK [3][-]{subsubsection.5.3.5}{Final Touch}{subsection.5.3}% 19
+\BOOKMARK [1][-]{section.6}{Cost Analysis of Selected Design}{}% 20
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 21

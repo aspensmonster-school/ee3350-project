@@ -62,9 +62,9 @@ Team Helios chose a common emitter to emitter follower design as a base. Choosin
 \end{abstract}
 
 \tableofcontents
-
+\listoffigures
 %hacky. might remove later.
-\newpage
+%\newpage
 
 % Split your lab report into sections by calling \section{Section name}
 \section{Introduction and Product Specifications}
@@ -108,6 +108,7 @@ The following design is an improvement on the basic models introduced at the sta
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.36]{final-psu.png}
+\caption{Final PSU Schematic}
 \label{fig_psu_schem}
 \end{figure}
 
@@ -118,6 +119,7 @@ From mains input to DC output, there are multiple issues to address. Switching a
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.35]{psu-block.png}
+\caption{PSU Block Diagram}
 \label{fig_psu_block}
 \end{figure}
 
@@ -141,6 +143,7 @@ This design used a CE-EF implementation with a single 12 V rail.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.4]{reject-2.png}
+\caption{Rejected CE-EF Single Rail}
 \label{fig_reject_2}
 \end{figure}
 
@@ -151,6 +154,7 @@ This design implemented the specification utilizing Op-Amps.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.4]{reject-3.png}
+\caption{Rejected Op-Amp Implementation}
 \label{fig_reject_3}
 \end{figure}
 
@@ -180,7 +184,8 @@ The following schematic is the chosen design of team Helios. It is comprised of 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.4]{final-schem.png}
+\includegraphics[scale=.35]{final-schem.png}
+\caption{Final Amp Schematic}
 \label{fig_amp_schem}
 \end{figure}
 
@@ -189,10 +194,11 @@ The following schematic is the chosen design of team Helios. It is comprised of 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=.38]{amp-block.png}
+\caption{Amp Block Diagram}
 \label{fig_amp_block}
 \end{figure}
 
-\subsection{Design Approach}
+\subsection{Design Philosophy}
 
 The traditional approach for design, starting with KVL and $I_{C}=\beta I_{B}$, functions well for single-transistor implementations. It is thorough and rigourous and the hybrid pi model is very accurate for the frequency range under consideration. However, this design methodology's heavy dependence on assumptions for system behaviour that can change and are at times interdependent can often lead to line after line of dense calculation that must be revamped continuously for each iteration of the design. Performing such calculations manually is error prone, and writing software to automate the process is outside of the scope of this project. 
 
@@ -200,13 +206,192 @@ Consequently, a work backward approach was taken, starting from arbitrarily sele
 
 This fast and loose approach permits a more rapid development process that can always be checked against the more formal mathematics once ballpark values are determined. In our case, design verification was performed using Multisim.
 
-\subsection{Calculations}
+\subsection{Analysis and Calculations}
 
-\textcolor{red}{Haven't gotten any calculations yet. Granted, the above does a good job on the philosophizing.}
+Given the specification and application, the following are the primary objectives of any design, and each is addressed by the design from Team Helios.
 
-\subsection{Considerations}
+\begin{itemize}
+\item
+\textbf{Meet Design Requirements --} These must be met first prior to any
+improvements on the design.
+\item
+\textbf{Prevent DC at Load --} Since a speaker is the specified load and speakers
+are easily destroyed by DC, keeping DC from reaching the load is a design con
+straint that is implied from the customer’s design requirements.
+\item
+\textbf{Directly Coupled --} There are three choices of coupling our emitter-fol
+lower: capacitively coupled, transformer coupling or direct coupling. Capacitive
+coupling and transformer-coupling both have serious downsides (bad low-fre
+quency response, bulky, expensive, frequency dependence, etc). If it’s possible,
+DC-coupling should be used.
+\item
+\textbf{Non-inverting from input to output --} With an eye toward perfor
+mance improvement, better technologies (like opamps) could be used to more
+cheaply/compactly improve performance and cost-effectively allow feature
+enhancements/additions. Although it’s not impossible to retrofit an inverting stage
+with an opamp (there’s always more than one way to achieve desired perfor
+mance), it would help ease the design process.
+\end{itemize}
 
-\textcolor{red}{Tweaking $R_{E1}$, servo feedback control, why use darlington instead of single transistor?, variance in output power as load increases from 2 to 16 ohms.}
+\subsubsection{Design Approach}
+
+The following serves as a more detailed explanation of the design philosophy described
+above.
+
+\begin{enumerate}
+\item
+Select a modest goal for the amplifier’s output level: since this was not in the
+“specifications”, we chose --through a little trial-and-error-- a 5mW output level
+into 2 $\Omega$. Matching the output level with the specified input level yields an AV of
+141 (see equation (2), below).
+\item
+A CE amplifier with bipolar-supply emitter-bias has a shot of the base being close
+to ground (ref: pg 241-244 of classroom text). It made sense to start there.
+\item
+Run a high-enough $I_{E}$ so that a “reasonably”-sized $R_{C}$ will give us the gain we
+need.
+\item
+Assume that $V_{DCLOAD} = 0$.
+\item
+Find a way to mesh the voltage level at the Darlington pair’s base and the VC both
+under quiescent conditions.
+\item
+If $V_{CEQ}$ is half-way between ground and +12V ($V_{CC}$), the signal can swing $\pm$ 6V.
+Given that the signal at the emitter will effectively not vary (we’re supposed to
+accommodate an input signal of $1mV_{PK}$), we don’t have to worry about premature
+clipping due to $V_{e}$ and $V_{c}$ conflicting. Besides, since we’ll couple the AC voltage
+at the collector with the load (through level-shift and the CC Darlington), a
+$2.12 V_{RMS}$ signal into 2$\Omega$ is way overkill (the resultant potential power at the load
+would be 2W).
+\end{enumerate}
+
+\subsubsection{CE Gain Stage}
+
+Picking an $R_{C}$ of 4.99k with a $V_{C}$ of 6V gives an $I_{C}$ of 1.2mA. This yields:
+
+\begin{equation}
+r'_{e} = 20.8\Omega
+\end{equation}
+
+Ignoring loading on $R_{C}$, this yields a maximum gain of 238. This is almost double the gain that we
+need:
+
+\begin{equation}
+A_{V} = \frac{V_{OUT}}{V_{IN}} = \frac{\sqrt{P_{OUT}\cdot R_{LOAD}}}{V_{IN}} = \frac{\sqrt{\left(5mW\right)\cdot \left(2\Omega\right)}}{\frac{2}{2\sqrt{2}}mV_{pp}} = 141
+\end{equation}
+
+Once this is established, we can select the value for $R_{E}$ to give us “ground” at the base. Working
+up from -12V:
+
+\begin{equation}
+R_{E} = \frac{12V - 0.7V}{1.2ma} \approx 10k\Omega
+\end{equation}
+
+For an $A_{V}$ of 141,
+
+\begin{equation}
+R_{E1} = \frac{R_{C}}{A_{V}} - r'_{e} \approx 15\Omega
+\end{equation}
+
+This value will be “tweaked” once the whole circuit’s been put together. The final CE circuit along with
+$C_{B}$ is given below:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{CE-stage.png}
+\caption{CE Stage}
+\label{fig_ce_stage}
+\end{figure}
+
+\subsubsection{Output Driver}
+
+The specification is lacking in certain details like maximum input levels. However, given that the input
+signal is specified as 0 to 2$mV_{pp}$, we’ll assume that the maximum is $2mV_{pp}$ while the minimum is
+0. Adding just a little extra for good measure, we’ll assume the peak current into the load to be
+100mA (10mW into 2$\Omega$). In a Class A amplifier, the current either flows into the load or into a
+current sink/source. An emitter follower can only source current, not sink it. So for the negative
+swing across the load to reach it’s peak, we need a current sink to provide the peak current. A
+“pull-down” resistor to the negative rail can do (in a pinch) instead of a transistor-based current
+sink:
+
+\begin{equation}
+R_{sink} = \frac{12V - 0.2V}{100mA} = 118\Omega
+\end{equation}
+
+This will provide our peak negative current to the load, when the emitter follower can’t.
+
+\subsubsection{Bridging the Gap}
+
+We have two remaining issues to meet our stated goals of:
+
+\begin{itemize}
+\item
+Direct-coupled output, and,
+\item
+Non-inverting output
+\end{itemize}
+
+Assuming that there’s a mechanism that allows us to have the CC emitter at 0V, the base
+voltage for the Darlington would be a nominal quiescent voltage of 1.4V. Unfortunately, the col
+lector voltage of the CE has a $VC_{EQ}$ of 6V. We need a circuit to shift the voltage from 6 to 1.4 and
+to invert the signal phase, like this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{shift-stage.png}
+\caption{Level-shifter Stage}
+\label{fig_ls_stage}
+\end{figure}
+
+Although there’s a slight amount of gain, you can see that if $R_{2}$ had twice the value as $R_{1}$, the volt
+age across $R_{1}$ would be double across R2. This is due to the fact that $V_{IN}$ is constant (ignoring the
+AC component) and sets up a fixed current in $R_{1}$ which, in turn, flows through $R_{2}$ causing a volt
+age drop equivalent to $V_{R2} = I_{E}\cdot R_{2}$. Stated another way, 6V across 5k$\Omega$ is the same current as
+12V across 10k$\Omega$. In this case, we’ll adjust the value of $R_{2}$ so that the q-current set up in $R_{1}$ gives
+us a voltage across $R_{2}$ of 1.4V above ground. This is where we expect the base of the Darlington to
+roughly be. Thus, the drop across the value for $R_{2}$ shown in Figure 3 will be 13.4V above the neg
+ative rail, or 1.4V above ground! Also, this stage is an inverter that takes the inverted signal from
+the CE and re-aligns the polarity fed to the non-inverting emitter followers to match the input sig
+nal.
+
+This resistor value can be “tweaked” to give us exactly i$0 V_{DC}$ across the load by using a multi-turn
+potentiometer in series with $R_{2}$. This solution may be good for a breadboard/prototype, but would
+not be good solution for a real product because:
+
+\begin{itemize}
+\item
+The pot’s value will drift with time/temperature/mechanical vibration, and,
+\item
+Each amplifier would have to be individually trimmed
+\end{itemize}
+
+To avoid this scenario, we can use an ingenious opamp stage called a ``servo'' amplifier.
+
+\subsubsection{Final Touch}
+
+The operation of a servo amp is simple: configured as an inverting integrator, an opamp is con-
+nected to a node of interest to adjust and the output (-180$^{\circ}$ out of phase) is injected into another
+node that can control the node that its monitoring. Figure 4 shows a typical servo application:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.6]{servo-app.png}
+\caption{Use of Op-Amps for Feedback Control}
+\label{fig_op_amp_demo}
+\end{figure}
+
+In the above figure, U1A is an inverting amplifier of gain $-\frac{R_{5}}{R_{2}}$. Since we’re feeding 15V into R2, 
+the output of U1A (when S1 is open) is -1.5V. Closing S1 causes the servo to sense the -1.5V and apply
+slowly increasing opposite voltage. The voltage climbs to the point that the output of U1A become
+0V. Any signal with a frequency lower than the servo’s cutoff frequency will be corrected...as long
+as U1B’s output can swing sufficient large to adjust U1A’s offsets via the voltage divider consist
+ing of $R_{1}$ \& $R_{4}$.
+
+All of these stages, along with the Darlington EF, form Team Helios' final schematic given at the
+start of this section.
+
+Observe how $R_{E1}$ has been tweaked as a result of design verification using various simulation tools of
+multisim. As well, observe how $R_{E}$ on the level shifter is split when a servo is employed.
 
 \section{Cost Analysis of Selected Design}
 

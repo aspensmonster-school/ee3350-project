@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.19)  30 NOV 2012 07:12
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.19)  30 NOV 2012 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -412,6 +412,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `project.toc'.
 
+ (./project.lof)
+\tf@lof=\write5
+\openout5 = `project.lof'.
+
 
 Underfull \hbox (badness 4899) in paragraph at lines 81--83
 []\OT1/ptm/m/n/10 USB con-nec-tor for charg-ing pur-poses (in-ves-ti-gate
@@ -421,91 +425,220 @@ Underfull \hbox (badness 4899) in paragraph at lines 81--83
 
 
 ]
-<final-psu.png, id=102, 696.6025pt x 488.82625pt>
+<final-psu.png, id=141, 696.6025pt x 488.82625pt>
 File: final-psu.png Graphic file (type png)
  <use final-psu.png>
 Package pdftex.def Info: final-psu.png used on input line 110.
 (pdftex.def)             Requested size: 250.7767pt x 175.97731pt.
 
-<psu-block.png, id=103, 693.59125pt x 166.6225pt>
+<psu-block.png, id=142, 693.59125pt x 166.6225pt>
 File: psu-block.png Graphic file (type png)
  <use psu-block.png>
-Package pdftex.def Info: psu-block.png used on input line 120.
+Package pdftex.def Info: psu-block.png used on input line 121.
 (pdftex.def)             Requested size: 242.76057pt x 58.31874pt.
 
-<reject-2.png, id=104, 318.18875pt x 220.825pt>
+<reject-2.png, id=143, 318.18875pt x 220.825pt>
 File: reject-2.png Graphic file (type png)
  <use reject-2.png>
-Package pdftex.def Info: reject-2.png used on input line 143.
+Package pdftex.def Info: reject-2.png used on input line 145.
 (pdftex.def)             Requested size: 127.27324pt x 88.32843pt.
 
-<reject-3.png, id=105, 530.98375pt x 290.08376pt>
+<reject-3.png, id=144, 530.98375pt x 290.08376pt>
 File: reject-3.png Graphic file (type png)
  <use reject-3.png>
-Package pdftex.def Info: reject-3.png used on input line 153.
+Package pdftex.def Info: reject-3.png used on input line 156.
 (pdftex.def)             Requested size: 212.38972pt x 116.03143pt.
 
-Underfull \hbox (badness 2057) in paragraph at lines 166--166
+Underfull \hbox (badness 2057) in paragraph at lines 170--170
 []\OT1/ptm/m/n/10 -Peak ef-fi-ciency of
  []
 
 
-Overfull \hbox (21.25699pt too wide) in paragraph at lines 161--174
+Overfull \hbox (21.25699pt too wide) in paragraph at lines 165--178
 [][] 
  []
 
-<final-schem.png, id=106, 637.38126pt x 622.325pt>
+[2 <./final-psu.png> <./psu-block.png> <./reject-2.png> <./reject-3.png>]
+<final-schem.png, id=150, 695.59875pt x 621.32124pt>
 File: final-schem.png Graphic file (type png)
  <use final-schem.png>
-Package pdftex.def Info: final-schem.png used on input line 183.
-(pdftex.def)             Requested size: 254.94798pt x 248.92558pt.
+Package pdftex.def Info: final-schem.png used on input line 187.
+(pdftex.def)             Requested size: 243.46321pt x 217.4657pt.
 
-Overfull \hbox (2.94798pt too wide) in paragraph at lines 183--185
- [][] 
- []
-
-[2 <./final-psu.png> <./psu-block.png> <./reject-2.png> <./reject-3.png>]
-<amp-block.png, id=112, 691.58376pt x 272.01625pt>
+<amp-block.png, id=151, 691.58376pt x 272.01625pt>
 File: amp-block.png Graphic file (type png)
  <use amp-block.png>
-Package pdftex.def Info: amp-block.png used on input line 191.
+Package pdftex.def Info: amp-block.png used on input line 196.
 (pdftex.def)             Requested size: 262.80455pt x 103.36723pt.
 
-Overfull \hbox (10.80455pt too wide) in paragraph at lines 191--193
+Overfull \hbox (10.80455pt too wide) in paragraph at lines 196--197
  [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 [3 <./final-schem.png> <./amp-block.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
+Overfull \hbox (5.63553pt too wide) detected at line 281
+[]\OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = [] = [] = [] = 141
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+<CE-stage.png, id=163, 282.05376pt x 297.11pt>
+File: CE-stage.png Graphic file (type png)
+ <use CE-stage.png>
+Package pdftex.def Info: CE-stage.png used on input line 301.
+(pdftex.def)             Requested size: 169.23355pt x 178.26736pt.
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+<shift-stage.png, id=164, 224.84pt x 290.08376pt>
+File: shift-stage.png Graphic file (type png)
+ <use shift-stage.png>
+Package pdftex.def Info: shift-stage.png used on input line 341.
+(pdftex.def)             Requested size: 134.90503pt x 174.05159pt.
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+[4 <./CE-stage.png> <./shift-stage.png>]
+<servo-app.png, id=177, 442.65375pt x 501.875pt>
+File: servo-app.png Graphic file (type png)
+ <use servo-app.png>
+Package pdftex.def Info: servo-app.png used on input line 378.
+(pdftex.def)             Requested size: 265.59428pt x 301.12732pt.
+
+Overfull \hbox (13.59428pt too wide) in paragraph at lines 378--379
+ [][] 
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
+[5 <./servo-app.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
  (./project.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 414.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
 Package rerunfilecheck Info: File `project.out' has not changed.
-(rerunfilecheck)             Checksum: 17D9A84E18676D01EAD40F1DBED2E324;1076.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
+(rerunfilecheck)             Checksum: D367565ADBAD856E7D27809623A7B4F8;1395.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
  ) 
 Here is how much of TeX's memory you used:
- 7606 strings out of 495059
- 114003 string characters out of 3182029
- 207720 words of memory out of 3000000
- 10700 multiletter control sequences out of 15000+200000
+ 7661 strings out of 495059
+ 114725 string characters out of 3182029
+ 212815 words of memory out of 3000000
+ 10722 multiletter control sequences out of 15000+200000
  37337 words of font info for 67 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,8n,40p,975b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,8n,40p,975b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on project.pdf (3 pages, 206293 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on project.pdf (5 pages, 280258 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 237 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 
