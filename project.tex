@@ -58,7 +58,7 @@
 \begin{abstract}
 The final project for Dr. Aslan's Fall 2012 Electronics I course was to design a power amplifier for use in audio applications. The goal was to apply knowledge of power supplies (diodes and transformers) and amplifiers (BJT transistors with hybrid pi model) to design a Class-A power amplifier from end to end. Particular emphasis was placed on collaborative design and CAD-assisted verification via Multisim software, as well as having as large a bandwidth as possible. 
 
-Team Helios chose a common emitter to emitter follower design as a base. Choosing to employ a bipolar dual-rail power supply to the system --so as to increase maximum voltage swing and have zero power output in the absence an applied signal (no heat dissipation)-- necessitated the introduction of a third transistor to act as a voltage shift. The result is an amplifier that has an approximate voltage gain of 142 and a power output of approximately five milliwatts across resistive loads varying from 2 to 16 ohms, as per the specification. Efficiency was measured as approximately five percent compared to the DC input. Total cost was determined to be X dollars. Lead times from manufacture to customer delivery are conservatively given at two months.
+Team Helios chose a common emitter to emitter follower design as a base. Choosing to employ a bipolar dual-rail power supply to the system --so as to increase maximum voltage swing and have zero power output in the absence an applied signal (no heat dissipation)-- necessitated the introduction of a third transistor to act as a voltage shift. The result is an amplifier that has an approximate voltage gain of 142 and a power output of approximately five milliwatts across resistive loads varying from 2 to 16 ohms, as per the specification. Efficiency was measured as approximately five percent compared to the DC input. Total cost of materials was determined to be \$17.93 dollars.
 \end{abstract}
 
 \tableofcontents
@@ -103,7 +103,7 @@ The high power gain and high efficiency requirements are restricted by the reque
 
 \section{Power Supply Design}
 
-The following design is an improvement on the basic models introduced at the start of semester. It takes into account various sources of noise and distortion common to mains input. It also attempts to mitigate common sources of design failure, such as inrush current and overvoltage. Finally, it further addresses safety concerns with the introduction of arc-resistant fuses and is a step in the right direction for approval by certifiers such as Underwriters Laboratories. 
+The following design is an improvement on the basic models introduced at the start of semester. It takes into account various sources of noise and distortion common to mains input. It also attempts to mitigate common sources of design failure, such as overvoltage. Finally, it further addresses safety concerns with the introduction of arc-resistant fuses and is a step in the right direction for approval by certifiers such as Underwriters Laboratories. 
 
 \begin{figure}[H]
 \centering
@@ -123,10 +123,6 @@ From mains input to DC output, there are multiple issues to address. Switching a
 \label{fig_psu_block}
 \end{figure}
 
-\subsection{Considerations}
-
-\textcolor{red}{Don't have Jonathan's report on the different types of caps yet. Holding off on this part for now.}
-
 \section{Rejected Amplifier Designs}
 
 Various approaches and topologies were investigated. From single-transistor to CE-EF to op-amp implementations, each design was examined on a broad level with advantages and drawbacks determined.
@@ -134,8 +130,15 @@ Various approaches and topologies were investigated. From single-transistor to C
 \subsection{Transformer Coupled}
 
 This design used a single CE transistor, replacing $R_{C}$ with a transformer to increase efficiency.
+The image was located at the second reference listed in the reference section.
 
-add my image here...
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.4]{reject-1.jpg}
+\caption{Rejected Transformer Coupling}
+\label{fig_reject_1}
+\end{figure}
+
 
 \subsection{CE-EF one rail}
 
@@ -162,7 +165,7 @@ This design implemented the specification utilizing Op-Amps.
 
 The following table summarizes the comparisons of these designs. 
 
-\begin{tabular}{|c|p{3cm}|c|c|}
+\begin{tabular}{|c|p{2.5cm}|c|c|}
 \hline
 & Advantages & Drawbacks \\
 \hline
@@ -343,7 +346,7 @@ to invert the signal phase, like this:
 \label{fig_ls_stage}
 \end{figure}
 
-Although there’s a slight amount of gain, you can see that if $R_{2}$ had twice the value as $R_{1}$, the volt
+Although there's a slight amount of gain, you can see that if $R_{2}$ had twice the value as $R_{1}$, the volt
 age across $R_{1}$ would be double across R2. This is due to the fact that $V_{IN}$ is constant (ignoring the
 AC component) and sets up a fixed current in $R_{1}$ which, in turn, flows through $R_{2}$ causing a volt
 age drop equivalent to $V_{R2} = I_{E}\cdot R_{2}$. Stated another way, 6V across 5k$\Omega$ is the same current as
@@ -369,7 +372,7 @@ To avoid this scenario, we can use an ingenious opamp stage called a ``servo'' a
 
 \subsubsection{Final Touch}
 
-The operation of a servo amp is simple: configured as an inverting integrator, an opamp is con-
+The operation of a servo amp is simple: configured as an inverting integrator, an opamp is con
 nected to a node of interest to adjust and the output (-180$^{\circ}$ out of phase) is injected into another
 node that can control the node that its monitoring. Figure 4 shows a typical servo application:
 
@@ -395,20 +398,52 @@ multisim. As well, observe how $R_{E}$ on the level shifter is split when a serv
 
 \section{Cost Analysis of Selected Design}
 
-\textcolor{red}{I didn't anticipate this being an all-night affair, but it has been :D For now, cost analysis will merely be the raw cost of components. I'll consider adding in production cost and delivery tables for the presentation over the weekend.}
+A bill of materials is below:
+
+\begin{enumerate}
+\item
+3 BJT\_NPN, 2N2222A, \$1.02
+\item
+1 BJT\_PNP, 2N3906, \$0.42
+\item
+1 OPAMP, TL072ACD, \$0.65
+\item
+1 FWB, 1B4B42, \$0.55
+\item
+1 SPST, switch, \$1.15
+\item
+1 VOLT REG, LM317LM, \$0.78
+\item
+1 VOLT REG, LM337LM, \$0.86
+\item
+2 DIODE, 1N4004, \$0.86
+\item
+1 FUSE, 0.5 AMP, \$0.54
+\item
+1 CT TRANSFORMER, 6:1, \$11.1
+\end{enumerate}
+
+\textbf{TOTAL: \$17.93}
+
+Resistor and capacitor costs are relatively negligible compared to the various transistors, op-amp, and transformer. 
+Pricing for the above components was obtained from digikey, and is based on a minimum order of one part.
+Additional savings are possible depending on the quantity of amplifiers the client wishes to produce.
+As well, the final cost may increase or decrease depending on the choice of manufacturer and any need to
+ship the amplifiers to multiple locations.
 
 \section{Conclusion}
 
-\textcolor{red}{Essentially reiterate the abstract. Place emphasis on cost and how we have not just met but exceeded customer specifications.}
+The design provided by Team Helios meets and exceeds customer expectations. It accounts for various 
+sources of circuit failure and builds in additional stability with its DC coupled CE-EF amplifier and
+Op-Amp servo feedback.
 
-%\begin{tabular}{|c|c|c|c|}
-%\hline
-%Value & Expected & Measured & \% error \\
-%\hline
-%$\omega_{o}$ (Hz) & 33,931 & 32,804 & -3.32\\
-%\hline
-%phase (deg) & 0 & -4.53 & NA\\
-%\hline
-%\end{tabular}
+\section{References}
+
+\begin{enumerate}
+\item
+T. L. Floyd, Electronic Devices, PrenticeHall, 9 th. Ed., 2012.
+\item
+http://www.circuitstoday.com/transformer-coupled-class-a-power-amplifier
+\end{enumerate}
 
 \end{document}

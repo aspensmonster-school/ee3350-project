@@ -2,20 +2,20 @@
 \contentsline {section}{\numberline {II}Implications of Specifications}{1}{section.2}
 \contentsline {section}{\numberline {III}Power Supply Design}{2}{section.3}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Block Diagram}{2}{subsection.3.1}
-\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Considerations}{2}{subsection.3.2}
 \contentsline {section}{\numberline {IV}Rejected Amplifier Designs}{2}{section.4}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Transformer Coupled}{2}{subsection.4.1}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}CE-EF one rail}{2}{subsection.4.2}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Op-Amp Implementation}{2}{subsection.4.3}
-\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Comparison Summary}{2}{subsection.4.4}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Comparison Summary}{3}{subsection.4.4}
 \contentsline {section}{\numberline {V}Selected Amplifer Design}{3}{section.5}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Block Diagram}{3}{subsection.5.1}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Design Philosophy}{3}{subsection.5.2}
 \contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Analysis and Calculations}{3}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}1}Design Approach}{3}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}1}Design Approach}{4}{subsubsection.5.3.1}
 \contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}2}CE Gain Stage}{4}{subsubsection.5.3.2}
 \contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}3}Output Driver}{4}{subsubsection.5.3.3}
 \contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}4}Bridging the Gap}{4}{subsubsection.5.3.4}
 \contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {V-C}5}Final Touch}{5}{subsubsection.5.3.5}
 \contentsline {section}{\numberline {VI}Cost Analysis of Selected Design}{5}{section.6}
-\contentsline {section}{\numberline {VII}Conclusion}{5}{section.7}
+\contentsline {section}{\numberline {VII}Conclusion}{6}{section.7}
+\contentsline {section}{\numberline {VIII}References}{6}{section.8}
